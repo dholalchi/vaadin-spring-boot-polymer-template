@@ -1,0 +1,26 @@
+<link rel="import" href="../../bower_components/polymer/polymer-element.html">
+
+<link rel="import" href="../components/header-bar.html">
+<link rel="import" href="../components/app-container.html">
+
+<dom-module id="main-view">
+    <template>
+        <style>
+
+        </style>
+        <app-container>
+            <header-bar id="header"></header-bar>
+            <slot></slot>
+        </app-container>
+
+    </template>
+    <script>
+        class MainView extends Polymer.Element {
+            static get is() {
+                return 'main-view'
+            }
+        }
+
+        customElements.define(MainView.is, MainView);
+    </script>
+</dom-module>

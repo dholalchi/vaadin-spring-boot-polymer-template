@@ -1,0 +1,45 @@
+<link href="../../bower_components/polymer/polymer-element.html" rel="import">
+
+<dom-module id="form-view">
+    <template>
+        <style>
+            .container {
+                background-color: seashell;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 50px;
+                flex-direction: column;
+                flex: auto;
+            }
+        </style>
+        <div class="container">
+            <vaadin-vertical-layout theme="spacing">
+
+                <vaadin-horizontal-layout theme="spacing-l">
+                    <vaadin-text-field id="inputId" required label="Name"
+                                       error-message="Please enter your name"
+                                       value="{{userInput}}"></vaadin-text-field>
+
+                    <vaadin-button id="buttonId" theme="primary" on-click="sayHello">Say hello
+                    </vaadin-button>
+                </vaadin-horizontal-layout>
+
+                <h2>
+                    <div id="greeting">[[greeting]]</div>
+                </h2>
+
+            </vaadin-vertical-layout>
+        </div>
+
+    </template>
+    <script>
+        class FormView extends Polymer.Element {
+            static get is() {
+                return 'form-view'
+            }
+        }
+
+        customElements.define(FormView.is, FormView);
+    </script>
+</dom-module>

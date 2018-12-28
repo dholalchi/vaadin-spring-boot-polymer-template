@@ -1,0 +1,20 @@
+<link rel="import" href="../../bower_components/polymer/polymer-element.html">
+<dom-module id="app-container">
+  <template>
+    <style></style>
+    <slot></slot>
+  </template>
+
+  <script>
+    /**
+     * An Element for wrapping the app
+     */
+    class AppContainer extends Polymer.Element {
+      static get is() {
+        return 'app-container';
+      }
+    }
+
+    window.customElements.define(AppContainer.is, AppContainer);
+  </script>
+</dom-module>

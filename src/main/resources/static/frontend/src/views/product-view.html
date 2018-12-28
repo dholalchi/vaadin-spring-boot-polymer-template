@@ -1,0 +1,38 @@
+<link rel="import" href="../../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../../bower_components/vaadin-combo-box/vaadin-combo-box.html">
+
+<dom-module id="product-view">
+    <template>
+        <style>
+            .container {
+                background-color: floralwhite;
+                display: grid;
+                justify-content: center;
+                align-items: center;
+                padding: 5px var(--lumo-space-s);
+                margin: 50px;
+                color: black;
+            }
+        </style>
+
+        <div class="container">
+            <div>
+                <vaadin-combo-box id="combo1" label="List One" placeholder="Select"></vaadin-combo-box>
+            </div>
+
+            <div>
+                <vaadin-combo-box id="combo2" label="List Two" placeholder="Select"></vaadin-combo-box>
+            </div>
+        </div>
+
+    </template>
+    <script>
+        class ProductView extends Polymer.Element {
+            static get is() {
+                return 'product-view'
+            }
+        }
+
+        customElements.define(ProductView.is, ProductView);
+    </script>
+</dom-module>
